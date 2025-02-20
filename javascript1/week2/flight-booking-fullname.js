@@ -30,18 +30,19 @@ console.log("The second exercise is finished.\n--------------------------------\
 function getFullFormalName2(firstname , surname, useFormalName, gender){  //choose true for formal and "gender" true for male and false for female 
    
     if(typeof firstname == "string" && typeof surname == "string" && firstname.trim() !== "" && surname.trim() !== ""){
-        if(useFormalName === "formal"){
+        const fullNameIs = firstname + " " + surname;
+        if(useFormalName){
             if(gender === "male"){
-                return "Lord " +firstname + " " + surname;
+                return "Lord " + fullNameIs;
             }else if(gender === "female"){
-                return "Lady " +firstname + " " + surname;
+                return "Lady " + fullNameIs;
             }else{
                 return "Please specify your gender by writing (male or female).";
             }
-        }else if(useFormalName === "not"){
-            return firstname + " " + surname;
+        }else if(!useFormalName){
+            return fullNameIs;
         }else{
-            return "Please specify if you want the name formal or not by writing (formal or not).";
+            return "Please specify if you want the name formal or not by writing (true or false).";
         }
 
 
@@ -50,8 +51,8 @@ function getFullFormalName2(firstname , surname, useFormalName, gender){  //choo
     }
     
 }
-const full_name1 = getFullFormalName2("Ahmed","Alkhaldi", "formal", "male");
-const full_name2 = getFullFormalName2("Julia","Lopez", "formal", "female");
+const full_name1 = getFullFormalName2("Ahmed","Alkhaldi", true, "male");
+const full_name2 = getFullFormalName2("Julia","Lopez", false, "female");
 
 console.log(full_name1 +"\n"+ full_name2);
 

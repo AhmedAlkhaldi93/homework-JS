@@ -2,23 +2,23 @@
 const boughtCandyPrices = [];
 
 function addCandy(candyType, weight){
-    let x;
+    let pricePerGram;
     if (candyType === "Sweet"){
-        boughtCandyPrices.push(0.5 * weight);
-        x= 0.5 * weight;
+        pricePerGram = 0.5 * weight;
+        boughtCandyPrices.push(pricePerGram);
     }else if (candyType === "Chocolate"){
-        boughtCandyPrices.push(0.7 * weight);
-        x= 0.7 * weight;
+        pricePerGram = 0.7 * weight;
+        boughtCandyPrices.push(pricePerGram);
     }else if (candyType === "Toffee"){
-        boughtCandyPrices.push(1.1 * weight);
-        x= 1.1 * weight;
+        pricePerGram = 1.1 * weight;
+        boughtCandyPrices.push(pricePerGram);
     }else if (candyType === "Chewing-gum"){
-        boughtCandyPrices.push(0.03 * weight);
-        x= 0.03 * weight;
+        pricePerGram = 0.03 * weight;
+        boughtCandyPrices.push(pricePerGram);
     }else{
         return "You have to choose one of our products (Sweet, Chocolate, Toffee, Chewing-gum)."
     }
-    return "The price of "+ candyType +" is "+ x
+    return "The price of "+ candyType +" is "+ pricePerGram
 }
 
 console.log(addCandy("Chocolate", 50));
