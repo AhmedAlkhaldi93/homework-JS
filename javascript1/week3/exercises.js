@@ -1,4 +1,6 @@
 
+//--------------------------------------------Color Association---------------------------------
+
 let array = [["white", "goodness"],["red", "aaaa"]];
 function colourAssociation(array){
     // We <3 colours..
@@ -17,7 +19,8 @@ function colourAssociation(array){
 
   console.log(colourAssociation(array));
 
-  //---------------------------------------------------------------------------------------------
+
+//--------------------------------------------Is this my tail---------------------------------
 
   function correctTail(bod, tail){
   
@@ -35,7 +38,8 @@ function colourAssociation(array){
   
   console.log(correctTail("lion","n"));
 
-  //---------------------------------------------------------------------------------------------
+
+//----------------------------------------------Longest word---------------------------------
 
   function findLongest(str){
   
@@ -49,9 +53,10 @@ function colourAssociation(array){
       }
       return longest;
   }
-  console.log(findLongest("ahmed alkhaldi ali"));
+  console.log("The longest word is " + findLongest("ahmed alkhaldi ali") +" letters.");
 
-  //---------------------------------------------------------------------------------------------
+
+//-----------------------------------------------Who's Online----------------------------
 
 const theList = [{
   username: 'David',
