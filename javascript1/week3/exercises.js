@@ -1,15 +1,15 @@
 
 //--------------------------------------------Color Association---------------------------------
 
-let array = [["white", "goodness"],["red", "aaaa"]];
+let array = [["white", "goodness"],["red", "energy"]];
 function colourAssociation(array){
     // We <3 colours..
     const resultArray = [];
     for (let i=0; i < array.length; i++){
-      const a = array[i][0];
-      const b = array[i][1];
+      const key = array[i][0];
+      const value = array[i][1];
       const obj = {
-        [a]: b
+        [key]: value
       };
       resultArray.push(obj);
     }
@@ -25,8 +25,8 @@ function colourAssociation(array){
   function correctTail(bod, tail){
   
     if (typeof bod === "string" && bod !== "" && typeof tail === "string" && tail !== ""){
-      const x = bod[bod.length-1];
-      if (x === tail){
+      const lastLetter = bod[bod.length-1];
+      if (lastLetter === tail){
         return true
       }else{
         return false
@@ -76,12 +76,14 @@ const theList = [{
   lastActivity: 5
 }]
 
-const resultObj = {};
-resultObj.online = [];
-resultObj.offline = [];
-resultObj.away = [];
 
-function whosOnline(){
+
+function whosOnline(theList){
+  const resultObj = {};
+  resultObj.online = [];
+  resultObj.offline = [];
+  resultObj.away = [];
+
   for(let i = 0; i < theList.length; i++){
     if (typeof theList[i].username === "string" && theList[i].username !== "" && (theList[i].status === "online" || theList[i].status === "offline") && theList[i].lastActivity >= 0 ){
       if(theList[i].status === "online" && theList[i].lastActivity <= 10){
@@ -110,4 +112,5 @@ function whosOnline(){
   return resultObj;
   
 }
-whosOnline();
+whosOnline(theList);
+whosOnline(theList);
