@@ -4,8 +4,8 @@ const travelInformation = {
   };
   
 function  travelPeriod(travelInformation){
-    const hours =  Math.floor(travelInformation.destinationDistance / 50);
-    const minutes = Math.floor((travelInformation.destinationDistance / 50 - hours)*60);
+    const hours =  Math.floor(travelInformation.destinationDistance / travelInformation.speed);
+    const minutes = Math.floor((travelInformation.destinationDistance / travelInformation.speed - hours) * 60);
     return hours + " hours and " + minutes + " minutes.";
 }
 
