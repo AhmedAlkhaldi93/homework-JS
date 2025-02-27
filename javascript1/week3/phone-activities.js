@@ -4,10 +4,11 @@ const activities = [];
 
 function addActivity(date, activity, duration){
     if(typeof date === "string" && typeof activity === "string" && typeof duration === "number"){
-        const objActivities = {};
-        objActivities.date = date;
-        objActivities.activity = activity;
-        objActivities.duration = duration;
+        const objActivities = {
+            date: date,
+            activity: activity,
+            duration: duration
+        };        
         activities.push(objActivities);
     }else{
         console.log("Please enter the right information.");

@@ -8,7 +8,6 @@ function saveNote(content, id) {
     }else{
         console.log("Please inter the correct parameters.");
     }
-    return notes;
 }
 
 saveNote("Pick up groceries", 1);
@@ -22,7 +21,7 @@ function getNote(id) {
     if(typeof id === "number"){
         for(let i=0; i < notes.length; i++){
             if(notes[i].id === id){
-                return notes[i].content;
+                return notes[i];
             }else{
                 return "The note id dose not exist."
             }
