@@ -25,13 +25,17 @@ console.log(activities);
 
 function showStatus(setLimit){
     let totalTime = 0;
-    for(let i = 0; i < activities.length; i++){
-        totalTime = totalTime + activities[i].duration;
-        if(totalTime >= setLimit){
-            return "You have reached your limit, no more smart phoning for you!"
+    if(activities.length === 0){
+        return "Add some activities before calling showStatus."
+    }else{
+        for(let i = 0; i < activities.length; i++){
+            totalTime = totalTime + activities[i].duration;
+            if(totalTime >= setLimit){
+                return "You have reached your limit, no more smart phoning for you!"
+            }
         }
+        return "You have added " +activities.length+ " activities. They amount to " + totalTime + " min. of usage.";
     }
-    return "You have added " +activities.length+ " activities. They amount to " + totalTime + " min. of usage.";
 }
 console.log(showStatus(100));
 
