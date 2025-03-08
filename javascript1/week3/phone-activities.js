@@ -1,11 +1,12 @@
 //--------------------------------------Adding an activity-----------------------
 
 const activities = [];
+let today  = new Date().toLocaleDateString("en-GB");
 
-function addActivity(date, activity, duration){
-    if(typeof date === "string" && typeof activity === "string" && typeof duration === "number"){
+function addActivity(activity, duration){
+    if(typeof today === "string" && typeof activity === "string" && typeof duration === "number"){
         const objActivities = {
-            date: date,
+            date: today,
             activity: activity,
             duration: duration
         };        
@@ -16,8 +17,9 @@ function addActivity(date, activity, duration){
     return activities;
 }
 
-addActivity("23/7-18", "Youtube", 30);
-addActivity("23/7-18", "Facebook", 20);
+addActivity("Youtube", 30);
+addActivity("Facebook", 20);
+addActivity("Youtube", 10);
 
 console.log(activities);
 
@@ -39,4 +41,12 @@ function showStatus(setLimit){
 }
 console.log(showStatus(100));
 
-
+////--------------------------------------spent the most time on-----------------------
+    // for(let i = 0; i < activities.length; i++){
+    //     let totlaSpent = activities[i].duration;
+    //     let x = activities.length-1;
+    //         if(activities[i].activity === activities[x].activity){
+    //             totlaSpent += activities[x].duration; 
+    //         }
+    //     console.log(totlaSpent);
+    // }
