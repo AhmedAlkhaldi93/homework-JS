@@ -61,6 +61,8 @@ function getReply(command){
         }
         setTimeout(timerDone, timerSecond);
         return "Timer set for " + timer + " minutes"
+    }else{
+        return "I'm sorry, but I couldn't understand you. Could you please enter your input again?"
     }
 }
 
