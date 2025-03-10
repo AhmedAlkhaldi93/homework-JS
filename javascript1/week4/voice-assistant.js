@@ -2,11 +2,13 @@ let lastName = undefined;
 const todo = [];
 
 function getReply(command){
-    if(lastName === command.split("is ")[1]){
-        return "nice to meet you again "+lastName
-    }else if(command.includes("Hello my name is ")){
-        lastName = command.split("is ")[1];
-        return "nice to meet you "+lastName
+    if(command.includes("Hello my name is ")){
+        if(lastName === command.split("is ")[1]){
+            return "nice to meet you again "+lastName
+        }else if(command.includes("Hello my name is ")){
+            lastName = command.split("is ")[1];
+            return "nice to meet you "+lastName
+        }
     }else if(command === "What is my name"){
         if(lastName == undefined){
             return "You did not introduce yourself yet"
@@ -27,17 +29,13 @@ function getReply(command){
         }
     }else if(command === "What is on my todo?"){
         let text = "";
-        for(let i=0; i < todo.length; i++){
-            text = todo.join(" and ");
-        }
-        
+        text = todo.join(" and ");
         return text
     }else if(command === "What day is it today?"){
         const day = new Date().getDate();
-        const month = new Date().getMonth();
+        const month = new Date().toLocaleDateString('en-UK', { month: 'long'});
         const year = new Date().getFullYear();
-        const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-        return day + ". of " + monthNames[month] + " " + year
+        return day + ". of " + month + " " + year
     }else if(command.includes("What is ")){
         const equation = command.replace("What is ", "");
         if(equation.includes("+")){
@@ -79,3 +77,4 @@ console.log(getReply("What is 3 + 5"));
 console.log(getReply("What is 9 / 3"));
 console.log(getReply("What is 3 * 3"));
 console.log(getReply("Set a timer for 0.2 minutes"));
+console.log(getReply("aaaaaaaa"));
