@@ -1,2 +1,2 @@
-## This is my second JS-2 lesson
+# This is my second lesson in JS2
 
