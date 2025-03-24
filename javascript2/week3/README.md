@@ -1,1 +1,1 @@
-# week 3 JS2
+# This is my third lesson in JS2
