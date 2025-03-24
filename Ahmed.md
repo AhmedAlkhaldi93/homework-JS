@@ -1,2 +1,2 @@
 ## Ahmed Alkhaldi
-# This is my JS homework at HYF.
+# This is my JS3 lessons at HYF.
