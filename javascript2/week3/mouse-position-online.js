@@ -8,7 +8,10 @@ function averageIs(event){
 };
 
 
-setTimeout(function() {
+setInterval(function() {        // setInterval It is a function that allows you to execute a specific code at a defined time interval
+    if(xArray.length === 0 && yArray.length === 0){
+        return;
+    }
     let totalX = 0;
     for(let i = 0; i < xArray.length; i++){
         totalX = totalX + xArray[i];
@@ -20,6 +23,8 @@ setTimeout(function() {
     const avaX = totalX / xArray.length;
     const avaY = totalY / yArray.length;
     console.log("average : "+ avaX + " and " + avaY);
+    xArray.length = 0;
+    yArray.length = 0;
     }, 5000);
 
 document.addEventListener("mousemove", averageIs);

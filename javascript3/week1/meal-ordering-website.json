@@ -1,0 +1,13 @@
+[{
+    "name" : "A",
+    "id" : 1,
+    "price" : 20,
+    "drinks" : ["cola", "water"],
+    "extras" : ["cheese", "lettuce"]
+},{
+    "name" : "B",
+    "id" : 2,
+    "price" : 18,
+    "drinks" : ["sprit", "water"],
+    "extras" : ["cheese", "lettuce"]
+}]
