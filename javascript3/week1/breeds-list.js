@@ -9,9 +9,10 @@ fetch("https://dog.ceo/api/breeds/list/all")
         fetch(linkImg)                                            // Here we  pass the link to get the dog img 
             .then(linkRow => linkRow.json())
             .then(link => {
-                const randomImg = document.createElement("img");
+                const randomImg = document.createElement("img");    
                 randomImg.src = link.message;
                 breedsListId.appendChild(randomImg);
+                
                 const breedName = document.createElement("p");
                 breedName.innerHTML = randomBreed;
                 breedsListId.appendChild(breedName);
