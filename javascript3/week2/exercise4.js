@@ -14,7 +14,7 @@ function YesNoFail4Seconds() {
 }
 
 
-async function runYesNO(){
+async function runYesNo(){
     try {
      const result = await YesNoFail4Seconds();
      console.log("The result is " + result);   
@@ -23,4 +23,4 @@ async function runYesNO(){
     }
 }
 
-runYesNO();
+runYesNo();
