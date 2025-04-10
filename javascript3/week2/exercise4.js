@@ -4,9 +4,9 @@ function YesNoFail4Seconds() {
             const random = Math.random();
             if (random < 0.33) {
                 resolve("Yes");
-            } else if(random < 0.66){
+            } else if (random < 0.66){
                 resolve("No");
-            }else{
+            } else {
                 reject("Something went wrong!");
             }   
         }, 4000);    
